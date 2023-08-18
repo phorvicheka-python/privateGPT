@@ -44,6 +44,22 @@ And wait for the script to require your input.
 Hit enter. You'll need to wait 20-30 seconds (depending on your machine) while the LLM model consumes the prompt and prepares the answer. Once done, it will print the answer and the 4 sources it used as context from your documents; you can then ask another question without re-running the script, just wait for the prompt again.
 
 
+**Notes:**
+- Command line to solve error CUDA:
+[Issue]: CUDA initialization: Unexpected error from cudaGetDeviceCount().
+
+```
+nvcc --version
+sudo apt update
+nvidia-smi
+sudo ubuntu-drivers autoinstall
+nvidia-smi
+python privateGPT.py
+```
+
+Make sure that `nvidia-smi`command output is working fine.
+
+
 ---
 ---
 
