@@ -1,3 +1,24 @@
+poetry env use python3.11
+
+pip install --upgrade pip poetry && poetry install --with ui,local && ./scripts/setup
+
+poetry install --extras chroma
+
+settings.yaml
+```
+vectorstore:
+  database: chroma
+```
+
+PGPT_PROFILES=local CUDA_VISIBLE_DEVICES=0 poetry run python -m private_gpt
+---
+
+https://github.com/imartinez/privateGPT/issues/1334
+https://github.com/imartinez/privateGPT/issues/1390
+https://github.com/imartinez/privateGPT/issues/1335
+
+---
+
 # 🔒 PrivateGPT 📑
 
 [![Tests](https://github.com/imartinez/privateGPT/actions/workflows/tests.yml/badge.svg)](https://github.com/imartinez/privateGPT/actions/workflows/tests.yml?query=branch%3Amain)

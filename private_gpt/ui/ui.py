@@ -106,7 +106,7 @@ class PrivateGptUi:
                             ChatMessage(content=interaction[0], role=MessageRole.USER),
                             ChatMessage(
                                 # Remove from history content the Sources information
-                                content=interaction[1].split(SOURCES_SEPARATOR)[0],
+                                content=interaction[1].split(SOURCES_SEPARATOR)[0] if interaction[1] is not None else '',
                                 role=MessageRole.ASSISTANT,
                             ),
                         ]
