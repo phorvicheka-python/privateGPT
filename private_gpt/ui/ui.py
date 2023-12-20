@@ -212,17 +212,18 @@ class PrivateGptUi:
             theme=gr.themes.Soft(primary_hue=slate),
             css=".logo { "
             "display:flex;"
-            "background-color: #C7BAFF;"
-            "height: 80px;"
-            "border-radius: 8px;"
+            "background-color: transparent;"
+            "height: 120px;"
             "align-content: center;"
             "justify-content: center;"
             "align-items: center;"
+            "padding-bottom: 16px;"
             "}"
-            ".logo img { height: 25% }"
+            ".logo img { height: 100% }"
             ".contain { display: flex !important; flex-direction: column !important; }"
             "#component-0, #component-3, #component-10, #component-8  { height: 100% !important; }"
             "#chatbot { flex-grow: 1 !important; overflow: auto !important;}"
+            "footer { visibility: hidden; }"
             "#col { height: calc(100vh - 112px - 16px) !important; }",
         ) as blocks:
             with gr.Row():
