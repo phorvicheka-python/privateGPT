@@ -1,14 +1,11 @@
 module.exports = {
   apps: [
     {
-      name: 'private-gpt', // choose a name for your app
-      script: 'poetry',
-      args: ['run', 'poetry', 'run', 'python', '-m', 'private_gpt'],
-      interpreter_args: 'run', // additional arguments for the interpreter
+      name: 'private-gpt',
+      script: './run_private_gpt.sh',
       autorestart: true,
-      watch: true, // optional: enable file watching for automatic restart on file changes
+      watch: true,
       env: {
-        NODE_ENV: 'production', // set the environment variables if needed
         PGPT_PROFILES: 'local',
         CUDA_VISIBLE_DEVICES: '0',
       },
